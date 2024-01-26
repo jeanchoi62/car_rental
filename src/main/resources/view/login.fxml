@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.car_rental.Controller.PrimaryController"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox fx:id="mainV" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="199.0" prefWidth="149.0" spacing="15.0">
+        <children>
+            <TextField fx:id="username" promptText="username" />
+            <TextField fx:id="password" promptText="password" />
+            <Button fx:id="customerLogIn" onAction="#validateCustomers" text="Customer Log In" />
+            <Button fx:id="employeeLogIn" onAction="#validateEmployee" text="Employee Log In" />
+            <Button fx:id="switchScene2" onAction="#switchToSplash" text="switch to splash screen" />
+        </children>
+    </VBox>
+
+</AnchorPane>

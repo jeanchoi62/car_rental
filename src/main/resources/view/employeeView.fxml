@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.car_rental.Controller.EmployeeController"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox>
+        <VBox>
+            <Label>Enter Car Information for Adding and Modification. Car # for Removal</Label>
+
+            <VBox fx:id="modifyVbox">
+                <Text>Car ID #: </Text>
+                <TextField fx:id="carID"> </TextField>
+                <Text>Make: </Text>
+                <TextField fx:id="carMake"></TextField>
+                <Text>Model: </Text>
+                <TextField fx:id="carModel"></TextField>
+                <Text>Year: </Text>
+                <TextField fx:id="carYear"></TextField>
+                <Text>VIN: </Text>
+                <TextField fx:id="carVIN"></TextField>
+                <Text>Available: </Text>
+                <TextField fx:id="carAvailability"></TextField>
+                <Text>Daily Cost: </Text>
+                <TextField fx:id="carDailyCost"></TextField>
+                <Text>Available Date: </Text>
+                <TextField fx:id="carDateAvailability"></TextField>
+            </VBox>
+            <Button onAction="#employeeAddCar">Add Car</Button>
+            <Button onAction="#employeeModifyCar">Modify Car</Button>
+            <Button onAction="#employeeRemoveCar">Remove Car</Button>
+            <Button onAction="#switchToSplash">Back to Home</Button>
+        </VBox>
+        <Label>ALL AVAILABLE CARS:</Label>
+        <ListView fx:id="carsListView" layoutX="33.0" layoutY="88.0"
+                  prefHeight="298.0" prefWidth="700.0" />
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.car_rental.Controller.CustomerController"
+            prefHeight="400.0" prefWidth="1000.0">
+
+
+    <HBox layoutX="10.0" layoutY="32.0">
+        <VBox>
+        <Text
+              strokeWidth="0.0" text="Your Current Rentals:">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Text>
+        <ListView fx:id="customersCarRentalsListView" />
+            <Text>TOTAL COST: </Text>
+            <TextField fx:id="currentTotalCost">$0</TextField>
+        </VBox>
+
+    <HBox layoutX="400.0" layoutY="32.0">
+        <VBox>
+            <Text  strokeType="OUTSIDE"
+                   strokeWidth="0.0" text="All Rental Cars:">
+                <font>
+                    <Font size="23.0" />
+                </font>
+            </Text>
+            <ListView fx:id="carsListView" layoutX="233.0" layoutY="88.0"
+                      prefHeight="298.0" prefWidth="603.0" />
+        </VBox>
+    </HBox>
+
+<HBox layoutY="400.0">
+    <VBox>
+        <Text  strokeType="OUTSIDE"
+               strokeWidth="0.0" text="CAR INFO:">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Text>
+    <Text>Car ID:</Text>
+    <TextField fx:id="carID"></TextField>
+    <Text>Rental Start Date:</Text>
+    <TextField fx:id="startRentalDate"></TextField>
+        <Text>Rental End Date:</Text>
+    <TextField fx:id="endRentalDate"></TextField>
+        <Text>Total Rental Days:</Text>
+        <TextField fx:id="rentalDays"></TextField>
+    <Text>TOTAL COST: </Text>
+    <TextField fx:id="totalCost"></TextField>
+    <Button onAction="#calculateCost">Calculate Quote</Button>
+    <Button onAction="#customerAddCarRental"> RENT CAR </Button>
+    <Button onAction="#customerReturnRental">Return Rental</Button>
+    <Button onAction="#switchToSplash">Back to Home</Button>
+    </VBox>
+</HBox>
+
+
+
+    </HBox>
+
+</AnchorPane>
